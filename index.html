@@ -17,7 +17,7 @@
   <body class="page">
     <header class="header">
       <nav class="theme-menu header__theme-menu">
-        <h1 class="header__theme-menu_title">&lt/HTML&gt</h1>
+        <h1 class="header__theme-menu_title">&lt;/HTML&gt;</h1>
         <h2 class="header__theme-menu_subtitle">Закрывающий тег</h2>
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
@@ -44,7 +44,7 @@
           <h2 class="card_title">Фритрек и нулевой спринт: Подготовка к работе</h2>
           <div class="card-container">
             <img src="./images/free_track.jpg" alt="Путешественник подходит к густому лесу" class="card_image free_track">
-            <span class="card_image-label">&lt/HTML&gt</span>
+            <span class="card_image-label">&lt;/HTML&gt;</span>
           </div>
           <div class="card-content">
             <p class="card_text">
@@ -81,7 +81,7 @@
           <h2 class="card_title">1 спринт: Я — чистый лист</h2>
           <div class="card-container">
             <img src="./images/clear_sheet.jpg" alt="Чистый лист бумаги" class="card_image clear_sheet">
-            <span class="card_image-label">&lt/HTML&gt</span>
+            <span class="card_image-label">&lt;/HTML&gt;</span>
           </div>
           <div class="card-content">
             <p class="card_text">
@@ -118,7 +118,7 @@
           <h2 class="card_title">1 спринт: А если не получится?</h2>
           <div class="card-container">
             <img src="./images/1st_sprint.jpg" alt="Шаги по лестнице вверх" class="card_image first_sprint">
-            <span class="card_image-label">&ltCSS&gt</span>
+            <span class="card_image-label">&lt;CSS&gt;</span>
           </div>
           <div class="card-content">
             <p class="card_text">
@@ -154,7 +154,7 @@
           <h2 class="card_title">2 спринт: Погоня за идеалом</h2>
           <div class="card-container">
             <img src="./images/perfect.jpg" alt="Пузырьковый уровень" class="card_image perfect">
-            <span class="card_image-label">&ltdesigions&gt</span>
+            <span class="card_image-label">&lt;desigions&gt;</span>
           </div>
           <div class="card-content">
             <p class="card_text">
@@ -228,7 +228,7 @@
           <h2 class="card_title">3 спринт: Обходные стратегии</h2>
           <div class="card-container">
             <img src="./images/strategy.jpg" alt="Карточки, соединенные нитями" class="card_image strategy">
-            <span class="card_image-label">&ltsupport&gt</span>
+            <span class="card_image-label">&lt;support&gt;</span>
           </div>
           <div class="card-content">
             <p class="card_text">
@@ -265,7 +265,7 @@
           <h2 class="card_title">3 спринт: Когда опускаются руки</h2>
           <div class="card-container">
             <img src="./images/doit.jpg" alt="Шайа Лабаф DO IT" class="card_image doit">
-            <span class="card_image-label">&ltlifes-style: none;&gt</span>
+            <span class="card_image-label">&lt;lifes-style: none;&gt;</span>
           </div>
           <div class="card-content">
             <p class="card_text">
@@ -302,7 +302,7 @@
           <h2 class="card_title">«Сейчас я здесь»</h2>
           <div class="card-container">
             <img src="./images/iam_here.jpg" alt="Рабочий стол программиста, монитор с кодом" class="card_image iam_here">
-            <span class="card_image-label">&ltexperience&gt</span>
+            <span class="card_image-label">&lt;experience&gt;</span>
           </div>
           <div class="card-content">
             <p class="card_text">
@@ -342,23 +342,25 @@
         onclick="window['dialog'].showModal()" 
         aria-controls="dialog">
         <svg class="floppy-svg" viewBox="0 0 28 28">
-          <use href="./svg/floppy.svg#floppy">
+          <use href="./svg/floppy.svg#floppy" />
         </svg> 
         <span class="button__text"> Сохранить на память </span>
       </button>
       <dialog class="dialog" id="dialog">
         <div class="dialog_content">
           <svg class="dialog-svg" viewBox="0 0 28 28" >
-            <use href="./svg/floppy.svg#floppy">
+            <use href="./svg/floppy.svg#floppy" />
           </svg>
           <span class="dialog__text">
             Вставьте дискету, чтобы продолжить
           </span>
         </div>
-        <button class="dialog_btn"  type="button" 
-        onclick="window['dialog'].close()">
-          <span class="button__text">ОК</span>
-        </button>
+        <form method="dialog" class="dialog_form">
+          <button class="dialog_btn"  type="button" 
+          onclick="window['dialog'].close()">
+            <span class="button__text">ОК</span>
+          </button>
+        </form>
       </dialog> 
     </main>
     <script src="./scripts/like.js"></script>

@@ -31,7 +31,7 @@
   max-inline-size: 100%;
 }
 
-.theme-menu__list{
+.theme-menu__list {
   display: inline-block;
   text-align: left;
   margin-block-start: 25px;
@@ -75,7 +75,7 @@
   block-size: 2px;
   inline-size: 88%;
   background-position: center;
-  background-color: var(--accent-color); 
+  background-color: var(--accent-color);
   transform-origin: left;
   scale: 0 0;
   transition: 0.3s ease;
@@ -98,7 +98,7 @@
 }
 
 .header__theme-menu_subtitle {
-  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);;
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   font-weight: 400;
 }
 
@@ -171,7 +171,7 @@
 }
 
 button {
-  font-family: var(--font-start);  
+  font-family: var(--font-start);
 }
 
 button:focus {
@@ -213,6 +213,8 @@ button:focus {
   height: 38px;
   border: 2px solid transparent;
   margin-inline-end: 5px;
+  background-color: transparent;
+  transition: .3s ease;
 }
 
 .card-content {
@@ -251,17 +253,11 @@ button:focus {
   height: 21px;
 }
 
-.button__text,
- .floppy-svg  {
+.button__text, .floppy-svg {
   position: relative;
   mix-blend-mode: difference;
   color: var(--btn-text);
   z-index: 1;
-}
-
-.card__icon-button {
-  background-color: transparent; 
-  transition: .3s ease;
 }
 
 .card__icon-button:focus {
@@ -290,13 +286,14 @@ button:focus {
 }
 
 .dialog[open] {
-  display: grid; 
+  display: grid;
   grid-row-gap: 30px;
   grid-template-rows: 63px 38px;
 }
 
 .dialog_btn {
   position: relative;
+  width: 100%;
   height: 100%;
   grid-column: 1 / 3;
   background-color: var(--bg-color);
@@ -342,7 +339,7 @@ dialog::backdrop {
   filter: grayscale(0.9);
 }
 
-.iam_here{
+.iam_here {
   filter: saturate(3) hue-rotate(30deg);
 }
 
