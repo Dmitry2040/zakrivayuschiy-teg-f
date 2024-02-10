@@ -143,9 +143,9 @@
 
 @supports((text-stroke: 0.7px var(--bg-color)) or (-webkit-text-stroke: 0.7px var(--bg-color))) {
   .card_image-label {
-      text-shadow: none;
-      -webkit-text-stroke: 0.7px var(--bg-color);
-      text-stroke: 0.7px var(--bg-color);
+    text-shadow: none;
+    -webkit-text-stroke: 0.7px var(--bg-color);
+    text-stroke: 0.7px var(--bg-color);
   }
 }
 
