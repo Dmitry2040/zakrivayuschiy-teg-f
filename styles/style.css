@@ -1,17 +1,17 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  max-inline-size: 696px;
+  max-inline-size: 700px;
   background-color: var(--bg-color);
   color: var(--accent-color);
-  background-image: var(--bg-image) ;
+  background-image: var(--bg-image);
   background-attachment: fixed;
-  background-position: center ;
+  background-position: center;
   background-size: cover;
   margin: 0 auto;
   font-family: var(--font-inter);
   font-size: 18px;
-  font-variation-settings: 'wgth' var(--font-weight-regular);
+  font-variation-settings: 'wght' var(--font-weight-regular);
 }
 
 .header {
@@ -24,7 +24,7 @@
   padding-block-start: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
   padding-inline: clamp(0.875rem, -6.8038rem + 32.7631vw, 7.53rem);
   padding-block-end: 22px;
-  border: 2px solid #000;
+  border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
   color: var(--accent-color);
   text-transform: uppercase;
@@ -88,16 +88,17 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  inset-inline-start: -14px;
+  inset-inline-start: -18px;
+  inset-block-start: 0;
   animation: motion_arrow 0.5s ease-in-out infinite  alternate;
 }
 
-.header__theme-menu_title {
-  margin-block-end: 20px;
-  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+.header__theme-menu_logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.header__theme-menu_subtitle {
+.header__theme-menu_title {
+  margin-block-start: 20px;
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   font-weight: 400;
 }
@@ -115,19 +116,21 @@
 }
 
 .card {
-  font-weight: 400;
+  line-height: 21px;
   background-color: var(--bg-color);
-  border: 2px solid black;
+  border: 2px solid var(--accent-color);
+  font-variation-settings: 'wght' var(--font-weight-regular);
 }
 
 .card-container {
   position: relative;
+  border-top: 2px solid var(--accent-color);
 }
 
 .card_image-label {
   position: absolute;
-  top: 25px;
-  right: clamp(0.75rem, -0.1694rem + 3.9758vw, 1.57rem);
+  top: 22px;
+  inset-inline-end: clamp(0.81rem, 0.5489rem + 1.1268vw, 1.563rem);
   font-family: var(--font-start);
   font-size: 14px;
   font-weight: 400;
@@ -151,43 +154,41 @@
 
 .card_title {
   font-size: 18px;
-  margin: 5px 10px;
-  font-variation-settings: 'wgth' var(--font-weight-bold);
+  line-height: 22px;
+  margin: 4.5px 10px;
+  font-variation-settings: 'wght' var(--font-weight-bold);
 }
 
 .card_image {
+  object-fit: cover;
+  object-position: center;
   height: auto;
   width: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
 }
 
 .card__like-button {
-  position: relative;
   width: 130px;
   height: 38px;
-  background-color: var(--bg-color);
-  border: 2px solid var(--accent-color)
 }
 
 button {
   font-family: var(--font-start);
+  transition: 0.3s ease;
 }
 
 button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible,
- .save-button:focus-visible,
- .dialog_btn:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
-  transition: 0.3s ease;
+button:hover {
+  cursor: pointer;
 }
 
-.card__like-button::after,
- .save-button::after,
- .dialog_btn::after {
+button:has(.button__text):focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+button:has(.button__text)::after {
   content: "";
   position: absolute;
   display: block;
@@ -201,14 +202,15 @@ button:focus {
   transition: 0.5s ease-in-out;
 }
 
-.card__like-button:hover::after,
- .save-button:hover::after,
- .dialog_btn:hover::after {
+/* button:hover::after {
   scale: 1 1;
-}
+} */
 
 .card__icon-button {
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 42px;
   height: 38px;
   border: 2px solid transparent;
@@ -220,7 +222,7 @@ button:focus {
 .card-content {
  padding: 25px;
  margin-block-start: -4px;
- font-weight: var(--font-weight-regular)
+ border-top: 2px solid var(--accent-color);
 }
 
 .card_text:not(:last-of-type) {
@@ -235,9 +237,13 @@ button:focus {
   font-weight: 400;
 }
 
-.save-button {
+button:has(.button__text) {
   position: relative;
   background-color: var(--bg-color);
+  border: 2px solid var(--accent-color)
+}
+
+.save-button {
   margin: 50px auto 100px;
   padding: 15px 20px;
   display: flex;
@@ -245,7 +251,6 @@ button:focus {
   font-weight: 400;
   align-items: center;
   gap: 8px;
-  border: 2px solid var(--accent-color)
 }
 
 .floppy-svg {
@@ -272,37 +277,42 @@ button:focus {
   opacity: 0;
 }
 
+.dialog-svg {
+  width: 39px;
+  height: 39px;
+}
+
 .dialog {
   padding: 30px;
-  max-width: 357px;
-  min-width: 341px;
+  width: clamp(21.31rem, 20.957rem + 1.5023vw, 22.31rem);
   font-family: var(--font-start);
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   background-color: var(--bg-color);
-  color: var(--accent-color)
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
 .dialog[open] {
-  display: grid;
-  grid-row-gap: 30px;
-  grid-template-rows: 63px 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
 }
 
 .dialog_btn {
   position: relative;
   width: 100%;
-  height: 100%;
-  grid-column: 1 / 3;
+  height: 38px;
   background-color: var(--bg-color);
   border: 2px solid var(--accent-color);
 }
 
 .dialog_content {
   display: grid;
-  grid-template-columns: 39px 1fr;
+  grid-template-columns: min-content 1fr;
   gap: 20px;
   align-items: center;
 }
@@ -311,36 +321,36 @@ dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 } 
 
-.free_track {
+.filter-blur {
   filter: blur(2px);
 }
 
-.clear_sheet {
+.filter_bright_250 {
   filter: brightness(250%);
 }
 
-.first_sprint {
+.filter_invert {
   filter: invert(100%);
 }
 
-.perfect {
-  filter: hue-rotate(180deg);
+.filter_hue_50 {
+  filter: hue-rotate(50deg);
 }
 
-.group {
+.filter_sepia {
   filter: sepia(30%);
 }
 
-.strategy {
-  filter:brightness(50%) saturate(3);
+.filter_saturate {
+  filter: saturate(3);
 }
 
-.doit {
+.filter_grayscale {
   filter: grayscale(0.9);
 }
 
-.iam_here {
-  filter: saturate(3) hue-rotate(30deg);
+.filter_macro {
+  filter: hue-rotate(50deg) saturate(3); 
 }
 
 @media (width <= 375px) {
@@ -355,7 +365,7 @@ dialog::backdrop {
   }
 
   .dialog {
-    padding-inline: 42px;
+    padding-inline: 40px;
   }
 
 }

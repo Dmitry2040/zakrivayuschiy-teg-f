@@ -1,95 +1,71 @@
 :root.theme-light {
---bg-color: #fff;
---accent-color: #000;
---favicon-color: #000;
---btn-text: #fff;
---fill-color: #000;
---heart-color: #FF0000;
---contour-color: #000;
---sparks-color: #FF0000;
---bg-image:
-repeating-linear-gradient(90deg, #e7e7e7 0 2px, transparent 2px 4px),
-repeating-linear-gradient(180deg, #e7e7e7 0 2px , transparent 2px 4px ),repeating-linear-gradient(180deg, #e7e7e7 0.01% , #1a1a1a 100% );
---font-weight-regular: 400;
---font-weight-bold: 700;
+  --bg-color: #fff;
+  --accent-color: #000;
+  --favicon-color: #000;
+  --btn-text: #fff;
+  --fill-color: #000;
+  --heart-color: #ff0000;
+  --contour-color: #000;
+  --sparks-color: #ff0000;
+  --bg-image:
+    repeating-linear-gradient(90deg, #e7e7e7 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #e7e7e7 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
 }
-
-.page .theme-light {
-  background-color: var(--bg-color); 
-  color: var(--accent-color);
-}   
 
 :root.theme-dark {
---bg-color: #000;
---accent-color: #00CC14;
---favicon-color: #00CC14;
---btn-text: #00CC14;
---fill-color: #000;
---heart-color: #FF0000;
---contour-color: #00CC14;
---sparks-color: #FF0000;
---bg-image:
-repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
-repeating-linear-gradient(180deg, #000 0 2px , transparent 2px 4px ),
-repeating-linear-gradient(180deg, #007f0c 0.01% , #004306 100% );
---font-weight-regular: 465;
---font-weight-bold: 785;
-}
-
-.page .theme-dark {
-  background-color: var(--bg-color);
-  color: var(--accent-color);
-
+  --bg-color: #000;
+  --accent-color: #00cc14;
+  --favicon-color: #00cc14;
+  --btn-text: #00cc14;
+  --fill-color: #000;
+  --heart-color: #ff0000;
+  --contour-color: #00cc14;
+  --sparks-color: #ff0000;
+  --bg-image:
+    repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #000 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #007f0c 0.01%, #004306 100%);
+  --font-weight-regular: 465;
+  --font-weight-bold: 785;
 }
 
 @media (prefers-color-scheme: dark) {
-
   :root {
     --bg-color: #000;
-    --accent-color: #00CC14;
-    --favicon-color: #00CC14;
-    --btn-text: #00CC14;
+    --accent-color: #00cc14;
+    --favicon-color: #00cc14;
+    --btn-text: #00cc14;
     --fill-color: #000;
-    --heart-color: #FF0000;
-    --contour-color: #00CC14;
-    --sparks-color: #FF0000;
-    --bg-image:
-    repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #000 0 2px , transparent 2px 4px ),
-    repeating-linear-gradient(180deg, #007f0c 0.01% , #004306 100% );
+    --heart-color: #ff0000;
+    --contour-color: #00cc14;
+    --sparks-color: #ff0000;
+    --bg-image: 
+      repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(180deg, #000 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(180deg, #007f0c 0.01%, #004306 100%);
     --font-weight-regular: 465;
     --font-weight-bold: 785;
-  }
-
-  .theme-auto {
-    background-color: var(--bg-color);
-    background-image: var(--bg-image);
   }
 }
 
 @media (prefers-color-scheme: light) {
-
   :root {
     --bg-color: #fff;
     --accent-color: #000;
-    --favicon-color: #00CC14;
+    --favicon-color: #00cc14;
     --btn-text: #fff;
     --fill-color: #000;
-    --heart-color: #FF0000;
+    --heart-color: #ff0000;
     --contour-color: #000;
-    --sparks-color: #FF0000;
-    --bg-image:  
-    repeating-linear-gradient(90deg, #e7e7e7 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #e7e7e7 0 2px , transparent 2px 4px ),repeating-linear-gradient(180deg, #e7e7e7 0.01% , #1a1a1a 100% );
+    --sparks-color: #ff0000;
+    --bg-image:
+      repeating-linear-gradient(90deg, #e7e7e7 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(180deg, #e7e7e7 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
     --font-weight-regular: 400;
     --font-weight-bold: 700;
   }
-    
-  .theme-auto {
-    background-color: var(--bg-color);
-    background-image: var(--bg-image);
-  }  
-}  
-
-     
-  
+}
