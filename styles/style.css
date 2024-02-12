@@ -202,9 +202,9 @@ button:has(.button__text)::after {
   transition: 0.5s ease-in-out;
 }
 
-/* button:hover::after {
+button:has(.button__text):hover::after {
   scale: 1 1;
-} */
+}
 
 .card__icon-button {
   padding: 0;
